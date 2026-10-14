@@ -1,0 +1,6 @@
+{
+  "name": "Guía de Claridad y Reinicio Consciente",
+  "description": "Landing page oficial de alta conversión para la Guía de Claridad y Reinicio Consciente. Diseño visual y paleta armónica con la portada del e-book.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

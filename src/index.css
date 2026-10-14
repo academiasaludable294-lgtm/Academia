@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Montserrat', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    color: #172B4D;
+    background-color: #F4F9FD;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif, .font-sans, button, input, select, textarea {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Watercolor Sky & Gold aesthetic utilities matching the e-book cover */
+.watercolor-bg {
+  background: 
+    radial-gradient(ellipse at 20% 0%, rgba(205, 231, 247, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 30%, rgba(167, 212, 242, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(199, 229, 246, 0.6) 0%, transparent 70%),
+    #F4F9FD;
+}
+
+.watercolor-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 215, 233, 0.45);
+}
+
+.watercolor-deep-card {
+  background: linear-gradient(135deg, #0F233D 0%, #17375E 50%, #0D1F36 100%);
+  border: 1px solid rgba(197, 168, 105, 0.3);
+}
+
+.gold-accent-text {
+  color: #B89647;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #B89647 50%, #9B772E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(197, 168, 105, 0.4);
+}
+
+/* Elegant smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* User custom hero banner styling */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #f0f4f8;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+  pointer-events: none;
+}
+
+.hero-title {
+  color: #1a2b4c;
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.85);
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+}
