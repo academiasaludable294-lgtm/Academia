@@ -22,6 +22,14 @@ export default function App() {
   const [isSampleOpen, setIsSampleOpen] = useState(false);
 
   const handleOpenCheckout = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: SITE_CONFIG.product.title,
+        value: Number(SITE_CONFIG.pricing.current),
+        currency: SITE_CONFIG.pricing.currency,
+      });
+    }
+
     try {
       window.location.href = SITE_CONFIG.pricing.checkoutUrl;
     } catch {
